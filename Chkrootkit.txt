@@ -1,0 +1,83 @@
+🛡️ What is Chkrootkit?
+Chkrootkit (short for Check Rootkit) is a free and open-source anti-rootkit tool for Unix-based systems like Linux. It’s used to detect signs of rootkits, which are malicious tools that hackers use to gain unauthorized control over a system.
+
+It helps system administrators or digital forensic analysts to identify hidden malware or compromised system binaries.
+
+🧠 In Simple Words:
+Imagine your system is your house. A rootkit is like a hidden intruder who sneaks in, hides behind the walls, and controls your house without your knowledge.
+Now, Chkrootkit is like a sniffer dog that checks your house for any signs of those hidden intruders.
+
+🔍 What Does It Check?
+Chkrootkit scans your system for:
+
+Check Type	Purpose
+Infected binaries	Looks at commands like ps, ls, netstat, and checks if they've been altered
+Hidden network connections	Detects suspicious network ports or services
+Login anomalies	Identifies unexpected or invisible user logins
+Process hiding	Spots processes that are running but hidden from the system monitor
+Rootkit signatures	Detects known rootkits using a predefined list
+
+🧪 How to Use Chkrootkit (for Assignment)
+🖥️ This tool is used on Linux. If you’re on Windows, you can either:
+
+Use a virtual machine (VM) with Ubuntu or Kali Linux
+
+Or boot into a Linux live environment
+
+✅ Step-by-Step for Assignment:
+1. 🔧 Install Chkrootkit
+Open your terminal in a Linux system and run:
+
+bash
+Copy
+Edit
+sudo apt update
+sudo apt install chkrootkit
+2. 🚨 Run a Rootkit Scan
+To scan your system:
+
+bash
+Copy
+Edit
+sudo chkrootkit
+This will display output for each check, like:
+
+vbnet
+Copy
+Edit
+Checking `ifconfig'... not infected
+Checking `login'... not infected
+Checking `ls'... not infected
+If it finds anything suspicious, it will say "INFECTED".
+
+3. 🔍 Optional: Simulate Rootkit (Only for advanced testing)
+For learning purposes only, you can download test files or check sample logs that mimic rootkit behavior. Do not install real rootkits unless on a secure, isolated test environment.
+
+4. 🧽 Explore Anti-Forensics Role
+Explain how Chkrootkit can be used in a forensic investigation to detect tampering, and how an attacker might try to bypass it (e.g., by replacing system binaries, using LD_PRELOAD tricks, etc.).
+
+📝 Sample Assignment Report Format:
+markdown
+Copy
+Edit
+🔧 Tool Studied: Chkrootkit
+
+📌 Objective:
+To analyze the system for rootkits and hidden malicious processes or modified binaries.
+
+🧪 Test Performed:
+- Installed and ran `chkrootkit` on Ubuntu system.
+- Examined outputs for common binaries (`ls`, `ps`, `netstat`, etc.)
+
+📝 Observations:
+- All checks returned “not infected”
+- No hidden processes or malicious logins detected
+
+🔐 Anti-Forensic Insight:
+While chkrootkit helps investigators detect rootkits, sophisticated attackers can install custom rootkits that avoid detection. However, it remains a powerful first-line tool in forensic analysis.
+
+⚠️ Note: The tool was used in a safe, legal, and educational Linux environment.
+✅ Summary Table (CCleaner vs Chkrootkit)
+Tool	| Purpose	| Platform	| Role in Anti-Forensics
+CCleaner	| Cleans digital traces	| Windows	| Removes history, securely wipes files
+Chkrootkit	| Detects hidden rootkits	| Linux	| Detects tampered files or hidden malware
