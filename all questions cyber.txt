@@ -1,0 +1,41 @@
+List of Assignments:
+
+1
+Network Scanning Using Nmap : A Practical Approach to perform network discovery and scanning Using Nmap.
+
+
+ 
+2 Exploring the Role and Implementation of SSL Certificates in Secure Communication. Objective:
+To understand the significance, creation, and practical usage of SSL certificates in ensuring secure web communications.
+
+
+3.Write a program to encrypt and decrypt text using the AES algorithm.
+
+4
+Write a program to encrypt a message using RSA. Explain the concept of public and private keys.
+
+
+5 
+Write a program to encrypt and decrypt text using the Play fair Cipher.
+
+
+6 
+Vulnerability Scanning with Nessus:
+Objective: Conduct a vulnerability scan on a virtual machine using Nessus. Identify vulnerabilities and suggest fixes.
+
+7
+Web Application Security Testing with Burp Suite:
+Objective: Use Burp Suite to perform a basic security assessment of a dummy web application. Identify vulnerabilities like XSS or SQL injection.
+
+
+8
+Threat Intelligence Research:
+Objective: Use tools like Shodan or Google Dorking to gather information about a target (within legal and ethical limits).
+
+
+9
+Anti-ForensicTools:
+Study the anti-forensic tools listed below and their role in covering up traces of digital footprints.
+。 CCleaner
+。 Chkrootkit
+Explore the functionality of each tool in deleting files, cleaning system traces, and scanning for root kits.

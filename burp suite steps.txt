@@ -1,0 +1,90 @@
+How to Operate Web Application 
+Vulnerability Scanner: Burp Suite
+
+1. Installation & Setup
+
+• Download Burp Suite:
+– Visit the PortSwigger website and download Burp Suite (Community, Professional, or 
+Enterprise edition).
+• Install Burp Suite:
+– Follow the installation process for your operating system (Windows, macOS, Linux).
+• Launch Burp Suite:
+– Open Burp Suite and select:
+• Temporary Project (for one-time use).
+• New Project (for saving workspaces).
+– Choose Use Burp Defaults for a quick start.
+
+2 Configuring Proxy Settings
+
+• Set Up Burp Proxy:
+– Go to Proxy → Options and ensure the default listener is on 127.0.0.1:8080.
+• Configure Browser Proxy:
+– Set your browser's proxy settings to:
+• IP Address: 127.0.0.1
+• Port: 8080
+– You can also use Burp’s embedded browser for easier configuration.
+Install Burp’s CA Certificate (for HTTPS interception):
+– Visit http://burpsuite in your proxy-configured browser.
+– Download and install the CA Certificate in your browser’s trusted root section.
+
+
+ 3. Intercepting and Analyzing Web Traffic
+
+• Enable Intercept Mode:
+– Go to Proxy → Intercept and click Intercept is on to capture HTTP/S requests.
+• Capture and Modify Requests:
+– Intercept and inspect traffic between your browser and the target.
+– Modify headers, cookies, or parameters in real time.
+• Forward Requests:
+– Use Forward to send the request to the server or Drop to block it.
+
+ 4. Performing a Website Scan
+
+• Target Configuration:
+– Go to Target → Scope and add the domain you want to scan.
+– This limits testing to in-scope URLs.
+• Active Scan (Automated Testing – Paid Feature):
+– Right-click on a request and select Do an Active Scan.
+– Burp will search for vulnerabilities like SQL Injection, XSS, CSRF, etc.
+• Passive Scan (Community Edition Available):
+– Automatically analyzes traffic for vulnerabilities without interacting with the server.
+
+
+Manual Testing Tools
+• Intruder (Automate Attacks):
+– Use for brute-force, fuzzing, and parameter testing.
+– Set a target request and customize payloads (e.g., password lists).
+• Repeater (Manual Request Testing):
+– Send individual requests for manual analysis.
+– Modify parameters and observe server responses.
+• Decoder (Data Encoding & Decoding):
+– Encode or decode values (e.g., Base64, URL encoding) during testing.
+• Sequencer (Token Analysis):
+– Analyze session randomness to identify weak session tokens.
+
+
+ 6. Generating Reports
+• View Scan Results:
+– Go to Dashboard or Issue Activity for a summary of detected 
+vulnerabilities.
+• Export Reports:
+– Right-click on a target and select Generate HTML/XML Report for sharing 
+findings.
+
+
+
+7. Best Practices for Using Burp Suite
+• Always define scope to avoid unauthorized scanning.
+• Use Intercept only when needed to avoid disrupting traffic.
+• Perform manual testing alongside automated scans for deeper 
+insights.
+• Update Burp Suite regularly for the latest vulnerability checks.
+• Respect legal and ethical guidelines – always obtain 
+permission before scanning.
+
+
+8. Useful Shortcuts in Burp Suite
+• Ctrl + I: Send request to Intruder.
+• Ctrl + R: Send request to Repeater.
+• Ctrl + Shift + D: Send to Decoder.
+• Ctrl + F: Search in request/response.
